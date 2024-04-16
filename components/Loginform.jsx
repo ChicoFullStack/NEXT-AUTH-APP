@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import Image from 'next/image';
+import logo from "../assets/logo.png"
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -36,7 +38,10 @@ export default function LoginForm() {
   return (
     <div className="grid place-items-center h-screen">
       <div className="shadow-lg p-5 rounded-lg border-t-4 border-blue-400">
-        <h1 className="text-xl font-bold my-4">Login</h1>
+        {/* <h1 className="text-xl font-bold my-4">Login</h1> */}
+        <div className="grid place-items-center py-2">
+          <Image src={logo} height={150} width={150} alt='Logo' />
+        </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">
           <input
