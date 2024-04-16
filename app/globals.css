@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 body{
-    background-image: url("../assets/image_fundo.jpg");
-    background-color: #f1f5f9;
+    background-image:  url("../assets/image_fundo.jpg");
+    background-color: #f1f5f9;    
   }
 
 input {
