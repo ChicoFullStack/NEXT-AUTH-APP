@@ -61,7 +61,7 @@ export default function RegisterForm() {
 
   return (
     <div className="grid place-items-center h-screen">
-      <div className="shadow-lg p-5 rounded-lg border-t-4 border-blue-400">
+      <div className="shadow-2xl p-5 rounded-lg border-t-4 border-blue-400 bg-white">
         {/* <h1 className="text-xl font-bold my-4">Register</h1> */}
         <div className="grid place-items-center py-2">
           <Image src={logo} height={150} width={150} alt='Logo' />
