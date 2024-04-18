@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "../../components/layout";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-import { authOptions } from "./api/auth/[...nextauth]/route";
+import { authOptions } from "../api/auth/[...nextauth]/route";
 import Image from 'next/image';
 import img1 from './0001.jpg';
 import img2 from './0002.jpg';
