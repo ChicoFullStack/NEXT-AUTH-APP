@@ -21,7 +21,7 @@ export default function ProcessAnalytics() {
   }, [repositories]);
 
   return (
-    <Layout>
+    <>
       <div className={styles.container_o}>
         <section className={styles.projetos}>
           {/* <h2>Projetos</h2> */}
@@ -36,6 +36,6 @@ export default function ProcessAnalytics() {
           )}
         </section>
       </div>
-    </Layout>
+    </>
   );
 }
