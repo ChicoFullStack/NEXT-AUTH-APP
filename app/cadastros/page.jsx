@@ -1,51 +1,54 @@
-"use client";
-
 import React from "react";
 import Layout from "../../components/layout";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
+import { authOptions } from "../api/auth/[...nextauth]/route";
 import BsTabs from "../../components/BsTabs";
 
 import CadCliente from "../../components/CadCliente";
 import CadColabourador from "../../components/CadColaborador";
 
-function Cadastro() {
+export default async function Cadastro() {
+  const session = await getServerSession(authOptions);
+
+  if (!session) {
+    redirect("/dashboard");
+  }
   return (
     <>
       <Layout>
-      <div className=' mx-0 p-0'>
-
-      {/* Tabs Component */}
-      <BsTabs items={items} />
-    </div>
+        <div className=" mx-0 p-0">
+          {/* Tabs Component */}
+          <BsTabs items={items} />
+        </div>
       </Layout>
     </>
   );
 }
 
-export default Cadastro;
-
 const items = [
   {
-    title: 'Cliente',
+    title: "Cliente",
     content: (
-      <div className='border-2 border-green-800 rounded-l p-4'>
+      <div className="border-2 border-green-800 rounded-l p-4">
         {/* <h1 className='text-3xl text-blue-600'>Title Test 1</h1> */}
-        <CadCliente/>
+        <CadCliente />
       </div>
     ),
   },
   {
-    title: 'Colaborador',
+    title: "Colaborador",
     content: (
-      <div className='border-2 border-green-800 rounded-lg p-4'>
+      <div className="border-2 border-green-800 rounded-lg p-4">
         {/* <h1 className='text-3xl text-blue-600'>Title Test 2</h1> */}
-        <CadColabourador/>
+        <CadColabourador />
       </div>
     ),
   },
   {
-    title: 'Tab 3',
+    title: "Tab 3",
     content: (
-      <div className='border-2 border-green-800 rounded-lg p-4'>
+      <div className="border-2 border-green-800 rounded-lg p-4">
         {/* <h1 className='text-3xl text-blue-600'>Title Test 3</h1> */}
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
@@ -59,6 +62,4 @@ const items = [
       </div>
     ),
   },
-
 ];
-
