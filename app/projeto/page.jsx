@@ -15,7 +15,7 @@ import img3 from './0003.jpg';
 export default async function Projeto() {
   const session = await getServerSession(authOptions);
 
-  if (session) {
+  if (!session) {
     redirect("/dashboard");
   }
   return (
