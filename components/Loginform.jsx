@@ -4,8 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import Image from 'next/image';
-import logo from "../assets/logo.png"
+import Image from "next/image";
+import logo from "../assets/logo.png";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -24,23 +24,23 @@ export default function LoginForm() {
         redirect: false,
       });
 
-      if(res.error){
+      if (res.error) {
         setError("Invalid Credentials");
         return;
       }
 
-      router.replace("dashboard")
+      router.replace("dashboard");
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   };
 
   return (
-    <div className="grid place-items-center h-screen">
-      <div className="shadow-2xl p-5 rounded-lg border-t-4 border-blue-400 bg-white" >
+    <div className="grid flex-auto place-items-center h-screen">
+      <div className="shadow-lg p-5 rounded-lg border-t-4 border-blue-400 bg-white">
         {/* <h1 className="text-xl font-bold my-4">Login</h1> */}
         <div className="grid place-items-center py-2">
-          <Image src={logo} height={150} width={150} alt='Logo' />
+          <Image src={logo} height={150} width={150} alt="Logo" />
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">
@@ -62,10 +62,12 @@ export default function LoginForm() {
               {error}
             </div>
           )}
-
-          <Link className="text-sm mt-3 text-right" href={"/register"}>
+          <div className="font-bold text-blue-800 text-center text-sm py-1 mt-2">
+            <p>Created by Opc Systems.</p>
+          </div>
+          {/* <Link className="text-sm mt-3 text-right" href={"/register"}>
             Don`t have an account? <span className="underline">Resister</span>{" "}
-          </Link>
+          </Link> */}
         </form>
       </div>
     </div>
