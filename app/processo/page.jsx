@@ -4,8 +4,17 @@ import Layout from "../../components/layout";
 import Card from "../../components/Card";
 import CircularProgress from "@mui/material/CircularProgress";
 import styles from "./Projetos.module.css";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
+import { authOptions } from "../api/auth/[...nextauth]/route";
 
 export default function Analytics() {
+
+  const session = getServerSession(authOptions);
+
+  if (!session) {
+    redirect("/dashboard");
+  }
   
   const [repositories, setRepositories] = useState([]);
 
