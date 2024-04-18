@@ -21,6 +21,7 @@ function Card() {
     <div>
       <section className={styles.card_body}>
         {repositories.map((repo) => (
+          // eslint-disable-next-line react/jsx-key
           <div className={styles.card}>
             {/* key= {repo.id} */}
             <h1>VISÃO GERAL DO PROCESSO</h1>
