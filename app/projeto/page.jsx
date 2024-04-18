@@ -16,7 +16,7 @@ export default async function Projeto() {
   const session = await getServerSession(authOptions);
 
   if (session) {
-    redirect("/projeto");
+    redirect("/dashboard");
   }
   return (
     <>
