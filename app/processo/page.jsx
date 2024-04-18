@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-async-client-component */
 "use client"
 import React, { useEffect, useState } from "react";
 import Layout from "../../components/layout";
@@ -6,7 +5,7 @@ import Card from "../../components/Card";
 import CircularProgress from "@mui/material/CircularProgress";
 import styles from "./Projetos.module.css";
 
-export default async function Analytics() {
+export default function Analytics() {
   
   const [repositories, setRepositories] = useState([]);
 
