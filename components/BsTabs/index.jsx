@@ -29,6 +29,7 @@ const BsTabs = ({ items }) => {
 
         <div className="bg-white p-1 rounded-l">
           {items.map((item, index) => (
+            // eslint-disable-next-line react/jsx-key
             <div className={`${selectedTab === index ? "" : "hidden"}`}>
               {item.content}
             </div>
