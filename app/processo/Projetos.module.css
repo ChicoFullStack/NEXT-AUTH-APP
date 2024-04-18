@@ -1,0 +1,11 @@
+.container_o {
+    width: 85%;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+

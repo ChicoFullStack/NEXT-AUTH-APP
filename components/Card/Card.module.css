@@ -1,0 +1,119 @@
+.card {
+    position: relative;
+    width: 550px;
+    height: 580px;
+    border: 1px solid rgb(143, 183, 172);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    font-family: 'JetBrain mono'  , sans-serif ;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 8px 8px 10px #44464780;
+    backdrop-filter: blur(2px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card label{
+    text-shadow: 2px 2px 3px rgb(255, 255, 255);
+}
+
+
+.superior {
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.superior h3 {
+    width: 100px;
+    height: 40px;
+    text-decoration: none;
+    text-align: center;    
+    background-color: rgb(30, 90, 73);
+    padding: 5px;
+    border: 1px solid #ded5d5;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px #47464680;
+    text-shadow: 2px 2px 3px black;
+    color: azure;
+}
+
+.inferior h3 {
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    background-color: rgb(30, 90, 73);
+    padding: 5px;
+    border: 1px solid #ded5d5;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px #47464680;
+    text-shadow: 2px 2px 3px #171717;
+    color: azure;
+}
+
+.inferior {
+    width: 100%;
+    position: absolute;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    text-shadow: 2px 2px 3px black;
+
+}
+
+.inferior_btn {
+    position: absolute;
+    width: 180px;
+    height: 300px;
+    margin: 10px;
+    display: flex;
+    padding-left: 60px;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.inferior_btn h3{
+    width: 130px;
+    height: 60px;
+    padding: 15px;
+    border: 3px solid #13121280;
+    text-align: center;
+    justify-content: center;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px #100f0f80;
+    text-shadow: 2px 2px 3px black;
+}
+
+.inferior_lbl {
+    position: absolute;
+    width: 220px;
+    height: 300px;
+    right: 0;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    text-shadow: 2px 2px 3px black;
+}
+.lig_b{
+    background-color: brown;
+}
+
+@media screen and (max-width: 720px) {
+    .card {
+        max-width: 450px;
+    }
+}
