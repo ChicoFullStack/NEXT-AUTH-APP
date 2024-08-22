@@ -9,7 +9,7 @@ function Card() {
   useEffect(() => {
     const buscarRepositorios = async () => {
       const response = await fetch(
-        "https://api-zeta-woad.vercel.app/api/list-one"
+        "https://api-render-hxwo.onrender.com/api/list-one"
       );
       const data = await response.json();
       setRepositories(data);
